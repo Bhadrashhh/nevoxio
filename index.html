@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nevoxio | Next-Gen IT Solutions, Mobile Apps & Web Engineering</title>
+  <meta name="description" content="Nevoxio specializes in cutting-edge mobile apps, enterprise web development, and cloud IT management. Experience next-level digital craftsmanship.">
+  <meta name="theme-color" content="#03050c">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/nevoxio_logo_white.png">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="Nevoxio | Next-Gen IT Solutions">
+  <meta property="og:description" content="Developing, managing, and creating high-performance apps & websites with cutting-edge 3D interactive experiences.">
+  <meta property="og:type" content="website">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Custom Glowing 3D Cursor -->
+  <div class="custom-cursor" aria-hidden="true"></div>
+  <div class="custom-cursor-follower" aria-hidden="true"></div>
+
+  <!-- WebGL 3D Background Canvas -->
+  <canvas id="webgl-canvas" aria-label="3D Interactive Background Scene"></canvas>
+
+  <!-- Cosmic Ambient Radial Glows -->
+  <div class="ambient-glow-top" aria-hidden="true"></div>
+  <div class="ambient-vignette" aria-hidden="true"></div>
+
+  <!-- Page Layout Wrapper -->
+  <div class="page-wrapper">
+
+    <!-- Glassmorphism Floating Navbar -->
+    <header class="navbar-container">
+      <nav class="navbar-pill" aria-label="Main Navigation">
+        
+        <!-- Brand / Logo -->
+        <a href="#home" class="brand-wrapper" id="nav-brand">
+          <img src="assets/nevoxio_logo_white.png" alt="Nevoxio Logo" class="brand-logo-img">
+          <span class="brand-name">NEVOXIO</span>
+        </a>
+
+        <!-- Center Nav Links -->
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#projects" class="nav-link">Portfolio</a></li>
+          <li><a href="#solutions" class="nav-link" data-open-contact>Web Systems</a></li>
+          <li><a href="#management" class="nav-link" data-open-contact>IT Management</a></li>
+          <li><a href="#about" class="nav-link" data-open-contact>About</a></li>
+        </ul>
+
+        <!-- Right Action Items -->
+        <div class="nav-actions">
+          <button class="btn-nav-cta" data-open-contact id="nav-contact-btn">
+            <span>Get in Touch</span>
+          </button>
+
+          <button class="mobile-toggle" aria-label="Toggle Mobile Menu" id="mobile-toggle-btn">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="hero-section" id="home">
+
+      <!-- Top Kicker Pill -->
+      <div class="hero-badge-pill">
+        <span class="sparkle">✦</span>
+        <span>NEXT-GEN IT SOLUTIONS &amp; SOFTWARE ARCHITECTURE</span>
+      </div>
+
+      <!-- 3D Interactive Spaced Letters ("N E V O X I O") -->
+      <div class="brand-letters-container" id="brand-letters" aria-label="Nevoxio">
+        <div class="letter-wrapper" data-char="N" title="N"><span class="brand-char">N</span></div>
+        <div class="letter-wrapper" data-char="E" title="E"><span class="brand-char">E</span></div>
+        <div class="letter-wrapper" data-char="V" title="V"><span class="brand-char">V</span></div>
+        <div class="letter-wrapper" data-char="O" title="O"><span class="brand-char">O</span></div>
+        <div class="letter-wrapper" data-char="X" title="X"><span class="brand-char">X</span></div>
+        <div class="letter-wrapper" data-char="I" title="I"><span class="brand-char">I</span></div>
+        <div class="letter-wrapper" data-char="O" title="O"><span class="brand-char">O</span></div>
+      </div>
+
+      <!-- Tagline & Description -->
+      <h1 class="hero-tagline">IT SOLUTIONS THAT SIMPLY ELEVATE</h1>
+      
+      <p class="hero-description">
+        We architect, manage, and engineer high-performance mobile applications, modern web platforms, and mission-critical cloud solutions built to scale effortlessly.
+      </p>
+
+      <!-- Primary CTA Group (Matching screenshots) -->
+      <div class="hero-cta-group">
+        <div class="hero-cta-buttons">
+          <button class="btn-primary-glow" data-open-contact id="hero-primary-cta">
+            <span>Start Your Project</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+
+          <a href="#projects" class="btn-secondary-glow" id="hero-explore-projects">
+            <span>Explore Projects</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <polyline points="19 12 12 19 5 12"></polyline>
+            </svg>
+          </a>
+        </div>
+
+        <div class="hero-sub-assurance">
+          <span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Rapid Agile Delivery
+          </span>
+          <span class="dot-separator">•</span>
+          <span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            Hotline: 0756180487
+          </span>
+          <span class="dot-separator">•</span>
+          <span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            nevoxioitsolitions@gmail.com
+          </span>
+        </div>
+
+        <!-- Scroll to Explore Projects Cue -->
+        <a href="#projects" class="scroll-down-cue" aria-label="Scroll down to explore projects">
+          <div class="mouse-scroll-icon">
+            <div class="wheel-dot"></div>
+          </div>
+          <span>SCROLL TO EXPLORE PROJECTS</span>
+        </a>
+      </div>
+
+      <!-- Interactive 3D Feature Cards Grid -->
+      <section class="hero-features-grid" aria-label="Core Capabilities">
+        
+        <!-- Feature 1: Featured Projects & Production Systems -->
+        <a href="#projects" class="feature-card-glass feature-card-link" id="card-portfolio">
+          <div class="card-icon-wrapper">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+          </div>
+          <h2 class="card-title">
+            <span>Featured Client Work</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </h2>
+          <p class="card-desc">
+            Explore 6 live client platforms engineered by Nevoxio across AI healthcare, luxury tourism, e-commerce, and automotive industries.
+          </p>
+          <div class="card-badge-tech">
+            <span class="tech-tag">AlertRix</span>
+            <span class="tech-tag">Triple R</span>
+            <span class="tech-tag">NifEdify</span>
+            <span class="tech-tag">CarSale</span>
+            <span class="tech-tag">Fritzo</span>
+          </div>
+        </a>
+
+        <!-- Feature 2: Web Solutions & Platforms -->
+        <article class="feature-card-glass" data-open-contact id="card-web">
+          <div class="card-icon-wrapper">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+          </div>
+          <h2 class="card-title">
+            <span>High-Velocity Web Systems</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </h2>
+          <p class="card-desc">
+            Ultra-fast corporate portals, SaaS platforms, and interactive 3D web experiences optimized for conversions and search engines.
+          </p>
+          <div class="card-badge-tech">
+            <span class="tech-tag">Next.js</span>
+            <span class="tech-tag">Three.js 3D</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">REST / GraphQL</span>
+          </div>
+        </article>
+
+        <!-- Feature 3: Enterprise IT Management -->
+        <article class="feature-card-glass" data-open-contact id="card-it">
+          <div class="card-icon-wrapper">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+              <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+              <line x1="6" y1="6" x2="6.01" y2="6"></line>
+              <line x1="6" y1="18" x2="6.01" y2="18"></line>
+            </svg>
+          </div>
+          <h2 class="card-title">
+            <span>IT Solutions &amp; DevOps</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </h2>
+          <p class="card-desc">
+            Complete management, deployment pipelines, cloud hosting architectures, and 24/7 security monitoring for your digital assets.
+          </p>
+          <div class="card-badge-tech">
+            <span class="tech-tag">Cloud Architecture</span>
+            <span class="tech-tag">CI/CD Automation</span>
+            <span class="tech-tag">Cyber Security</span>
+            <span class="tech-tag">24/7 Support</span>
+          </div>
+        </article>
+
+      </section>
+
+    </main>
+
+    <!-- ======================================================================
+         FEATURED PROJECTS SHOWCASE SECTION (Interactive 3D Portfolio)
+         ====================================================================== -->
+    <section class="projects-section" id="projects" aria-label="Featured Projects">
+      
+      <!-- Section Header -->
+      <div class="projects-header">
+        <div class="hero-badge-pill">
+          <span class="sparkle">✦</span>
+          <span>PROVEN DIGITAL CRAFTSMANSHIP &amp; CLIENT SUCCESS</span>
+        </div>
+        <h2 class="projects-title">Featured Client Work</h2>
+        <p class="projects-subtitle">
+          Explore real-world production platforms, AI-driven healthcare companions, and high-converting web applications engineered and managed by Nevoxio.
+        </p>
+
+        <!-- Category Filter Tabs -->
+        <div class="projects-filter-bar" role="tablist">
+          <button class="filter-pill-btn active" data-filter="all">All Projects (6)</button>
+          <button class="filter-pill-btn" data-filter="ai">AI &amp; HealthTech</button>
+          <button class="filter-pill-btn" data-filter="tourism">Travel &amp; Tourism</button>
+          <button class="filter-pill-btn" data-filter="web">Web &amp; SaaS</button>
+          <button class="filter-pill-btn" data-filter="ongoing">Ongoing (1)</button>
+        </div>
+      </div>
+
+      <!-- 3D Projects Grid -->
+      <div class="projects-grid" id="projects-grid">
+
+        <!-- 1. NifEdify -->
+        <div class="project-card-3d" data-category="web">
+          <article class="project-card-inner">
+            
+            <!-- Browser Mockup Chrome -->
+            <div class="browser-chrome">
+              <div class="browser-dots">
+                <span class="b-dot red"></span>
+                <span class="b-dot yellow"></span>
+                <span class="b-dot green"></span>
+              </div>
+              <div class="browser-address">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                <span>nifedify.com</span>
+              </div>
+              <div class="project-live-indicator">
+                <span class="pulse-indicator"></span>
+                <span>Live System</span>
+              </div>
+            </div>
+
+            <!-- Real Screenshot Preview Stage -->
+            <a href="https://www.nifedify.com/" target="_blank" rel="noopener noreferrer" class="project-preview-stage" aria-label="Visit NifEdify live website">
+              <img src="assets/images/projects/nifedify.png" alt="NifEdify Learning Platform Screenshot" class="project-preview-img" loading="lazy">
+              <div class="preview-overlay-badge">
+                <span class="preview-pill-tag">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                  NifEdify LMS
+                </span>
+                <span class="preview-zoom-icon" title="Open live site">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </span>
+              </div>
+            </a>
+
+            <!-- Card Content Details -->
+            <div class="project-content">
+              <div class="project-category-kicker">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                <span>EdTech &amp; Learning Platform</span>
+              </div>
+              <h3 class="project-title">NifEdify — Professional LMS Hub</h3>
+              <p class="project-desc">
+                High-performance conceptual commerce education platform featuring custom LMS student portals, digital tute delivery, and real-time student leaderboards.
+              </p>
+              <div class="project-tech-tags">
+                <span class="tech-tag-pill">LMS Portal</span>
+                <span class="tech-tag-pill">Next.js</span>
+                <span class="tech-tag-pill">Student Auth</span>
+                <span class="tech-tag-pill">Leaderboards</span>
+              </div>
+            </div>
+
+            <!-- Footer Action Buttons -->
+            <div class="project-card-footer">
+              <a href="https://www.nifedify.com/" target="_blank" rel="noopener noreferrer" class="btn-project-visit" aria-label="Visit live NifEdify website">
+                <span>Visit Live Project</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+              <button class="btn-project-copy" data-copy-val="https://www.nifedify.com/" title="Copy project URL">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
+
+          </article>
+        </div>
+
+        <!-- 2. Rinzi Enterprises -->
+        <div class="project-card-3d" data-category="web">
+          <article class="project-card-inner">
+            
+            <!-- Browser Mockup Chrome -->
+            <div class="browser-chrome">
+              <div class="browser-dots">
+                <span class="b-dot red"></span>
+                <span class="b-dot yellow"></span>
+                <span class="b-dot green"></span>
+              </div>
+              <div class="browser-address">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                <span>rinzienterprises.com</span>
+              </div>
+              <div class="project-live-indicator">
+                <span class="pulse-indicator"></span>
+                <span>Live Platform</span>
+              </div>
+            </div>
+
+            <!-- Real Screenshot Preview Stage -->
+            <a href="https://frontend-ten-tau-bnuqo59tem.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-preview-stage" aria-label="Visit Rinzi Enterprises live website">
+              <img src="assets/images/projects/rinzi.png" alt="Rinzi Enterprises Industrial Tools Screenshot" class="project-preview-img" loading="lazy">
+              <div class="preview-overlay-badge">
+                <span class="preview-pill-tag amber">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                  Industrial Tools
+                </span>
+                <span class="preview-zoom-icon" title="Open live site">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </span>
+              </div>
+            </a>
+
+            <!-- Card Content Details -->
+            <div class="project-content">
+              <div class="project-category-kicker">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                <span>Industrial &amp; Commercial B2B</span>
+              </div>
+              <h3 class="project-title">Rinzi Enterprises — Industrial Tools</h3>
+              <p class="project-desc">
+                High-end digital platform for authorized Stanley, STIHL &amp; Husqvarna machinery suppliers with 500+ product catalogs, fluid smoke aesthetics, and WhatsApp routing.
+              </p>
+              <div class="project-tech-tags">
+                <span class="tech-tag-pill">Industrial Catalog</span>
+                <span class="tech-tag-pill">Fluid Motion</span>
+                <span class="tech-tag-pill">B2B Quotations</span>
+                <span class="tech-tag-pill">100+ Resellers</span>
+              </div>
+            </div>
+
+            <!-- Footer Action Buttons -->
+            <div class="project-card-footer">
+              <a href="https://frontend-ten-tau-bnuqo59tem.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-project-visit" aria-label="Visit live Rinzi Enterprises website">
+                <span>Visit Live Project</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+              <button class="btn-project-copy" data-copy-val="https://frontend-ten-tau-bnuqo59tem.vercel.app/" title="Copy project URL">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
+
+          </article>
+        </div>
+
+        <!-- 3. CarSale -->
+        <div class="project-card-3d" data-category="web">
+          <article class="project-card-inner">
+            
+            <!-- Browser Mockup Chrome -->
+            <div class="browser-chrome">
+              <div class="browser-dots">
+                <span class="b-dot red"></span>
+                <span class="b-dot yellow"></span>
+                <span class="b-dot green"></span>
+              </div>
+              <div class="browser-address">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                <span>carsale-jade.vercel.app</span>
+              </div>
+              <div class="project-live-indicator">
+                <span class="pulse-indicator"></span>
+                <span>Live Platform</span>
+              </div>
+            </div>
+
+            <!-- Real Screenshot Preview Stage -->
+            <a href="https://carsale-jade.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-preview-stage" aria-label="Visit CarSale live website">
+              <img src="assets/images/projects/carsale.png" alt="CarSale Luxury Automotive Showcase Screenshot" class="project-preview-img" loading="lazy">
+              <div class="preview-overlay-badge">
+                <span class="preview-pill-tag">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="8" rx="2"></rect><path d="M6 11V7a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v4"></path><circle cx="7.5" cy="15.5" r="1.5"></circle><circle cx="16.5" cy="15.5" r="1.5"></circle></svg>
+                  Premium Collection
+                </span>
+                <span class="preview-zoom-icon" title="Open live site">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </span>
+              </div>
+            </a>
+
+            <!-- Card Content Details -->
+            <div class="project-content">
+              <div class="project-category-kicker">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                <span>Luxury Automotive Marketplace</span>
+              </div>
+              <h3 class="project-title">CarSale — Premium Auto Collection</h3>
+              <p class="project-desc">
+                Luxury dealership marketplace for verified pre-owned vehicles and luxury imports, engineered with dynamic inventory spec sheets and instant inquiry forms.
+              </p>
+              <div class="project-tech-tags">
+                <span class="tech-tag-pill">Automotive UX</span>
+                <span class="tech-tag-pill">Inventory Engine</span>
+                <span class="tech-tag-pill">Fast Filtering</span>
+                <span class="tech-tag-pill">Lead Routing</span>
+              </div>
+            </div>
+
+            <!-- Footer Action Buttons -->
+            <div class="project-card-footer">
+              <a href="https://carsale-jade.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-project-visit" aria-label="Visit live CarSale website">
+                <span>Visit Live Project</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+              <button class="btn-project-copy" data-copy-val="https://carsale-jade.vercel.app/" title="Copy project URL">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
+
+          </article>
+        </div>
+
+        <!-- 4. Triple R Holidays -->
+        <div class="project-card-3d" data-category="tourism web">
+          <article class="project-card-inner">
+            
+            <!-- Browser Mockup Chrome -->
+            <div class="browser-chrome">
+              <div class="browser-dots">
+                <span class="b-dot red"></span>
+                <span class="b-dot yellow"></span>
+                <span class="b-dot green"></span>
+              </div>
+              <div class="browser-address">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                <span>triplerholidays.com</span>
+              </div>
+              <div class="project-live-indicator">
+                <span class="pulse-indicator"></span>
+                <span>Live System</span>
+              </div>
+            </div>
+
+            <!-- Real Screenshot Preview Stage -->
+            <a href="https://triplerholidays.com/" target="_blank" rel="noopener noreferrer" class="project-preview-stage" aria-label="Visit Triple R Holidays live website">
+              <img src="assets/images/projects/tripler.jpg" alt="Triple R Holidays Sri Lanka Tours Screenshot" class="project-preview-img" loading="lazy">
+              <div class="preview-overlay-badge">
+                <span class="preview-pill-tag">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="m4.93 4.93 4.24 4.24"></path><path d="m14.83 9.17 4.24-4.24"></path><path d="m14.83 14.83 4.24 4.24"></path><path d="m9.17 14.83-4.24 4.24"></path><circle cx="12" cy="12" r="4"></circle></svg>
+                  Sri Lanka Tours
+                </span>
+                <span class="preview-zoom-icon" title="Open live site">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </span>
+              </div>
+            </a>
+
+            <!-- Card Content Details -->
+            <div class="project-content">
+              <div class="project-category-kicker">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 17.93V17a2 2 0 0 0-2-2h-1v-2h2a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2H9"></path></svg>
+                <span>Tourism &amp; Booking Engine</span>
+              </div>
+              <h3 class="project-title">Triple R Holidays — Tour Booking Hub</h3>
+              <p class="project-desc">
+                Global travel platform featuring tailor-made Sri Lanka tours, outbound holiday bookings, dynamic itineraries, and high-converting customer booking journeys.
+              </p>
+              <div class="project-tech-tags">
+                <span class="tech-tag-pill">Travel Tech</span>
+                <span class="tech-tag-pill">Itinerary Builder</span>
+                <span class="tech-tag-pill">Multi-Currency</span>
+                <span class="tech-tag-pill">Direct Booking</span>
+              </div>
+            </div>
+
+            <!-- Footer Action Buttons -->
+            <div class="project-card-footer">
+              <a href="https://triplerholidays.com/" target="_blank" rel="noopener noreferrer" class="btn-project-visit" aria-label="Visit live Triple R Holidays website">
+                <span>Visit Live Project</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+              <button class="btn-project-copy" data-copy-val="https://triplerholidays.com/" title="Copy project URL">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
+
+          </article>
+        </div>
+
+        <!-- 5. AlertRix -->
+        <div class="project-card-3d" data-category="ai web">
+          <article class="project-card-inner">
+            
+            <!-- Browser Mockup Chrome -->
+            <div class="browser-chrome">
+              <div class="browser-dots">
+                <span class="b-dot red"></span>
+                <span class="b-dot yellow"></span>
+                <span class="b-dot green"></span>
+              </div>
+              <div class="browser-address">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                <span>alertrix.lk</span>
+              </div>
+              <div class="project-live-indicator">
+                <span class="pulse-indicator"></span>
+                <span>Live System</span>
+              </div>
+            </div>
+
+            <!-- Real Screenshot Preview Stage -->
+            <a href="https://alertrix.lk/" target="_blank" rel="noopener noreferrer" class="project-preview-stage" aria-label="Visit AlertRix live website">
+              <img src="assets/images/projects/alertrix.png" alt="AlertRix AI Elderly Care Device Screenshot" class="project-preview-img" loading="lazy">
+              <div class="preview-overlay-badge">
+                <span class="preview-pill-tag">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--neon-cyan)" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                  AI Care Companion
+                </span>
+                <span class="preview-zoom-icon" title="Open live site">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </span>
+              </div>
+            </a>
+
+            <!-- Card Content Details -->
+            <div class="project-content">
+              <div class="project-category-kicker">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v8M8 12h8"></path></svg>
+                <span>AI HealthTech &amp; IoT</span>
+              </div>
+              <h3 class="project-title">AlertRix — Smart Alerts, Safe Doses</h3>
+              <p class="project-desc">
+                AI-powered elderly care hardware and software companion platform featuring smart automated dosage dispensing, biometric telemetry, and emergency alerts.
+              </p>
+              <div class="project-tech-tags">
+                <span class="tech-tag-pill">AI Care Model</span>
+                <span class="tech-tag-pill">IoT Hardware UI</span>
+                <span class="tech-tag-pill">Real-Time Alerts</span>
+                <span class="tech-tag-pill">Cloud Telemetry</span>
+              </div>
+            </div>
+
+            <!-- Footer Action Buttons -->
+            <div class="project-card-footer">
+              <a href="https://alertrix.lk/" target="_blank" rel="noopener noreferrer" class="btn-project-visit" aria-label="Visit live AlertRix website">
+                <span>Visit Live Project</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+              <button class="btn-project-copy" data-copy-val="https://alertrix.lk/" title="Copy project URL">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
+
+          </article>
+        </div>
+
+        <!-- 6. Fritzo (Ongoing Project) -->
+        <div class="project-card-3d" data-category="web ongoing">
+          <article class="project-card-inner" style="border-color: rgba(245, 158, 11, 0.4); box-shadow: 0 20px 45px -10px rgba(0,0,0,0.7), 0 0 30px rgba(245, 158, 11, 0.15);">
+            
+            <!-- Browser Mockup Chrome -->
+            <div class="browser-chrome">
+              <div class="browser-dots">
+                <span class="b-dot red"></span>
+                <span class="b-dot yellow"></span>
+                <span class="b-dot green"></span>
+              </div>
+              <div class="browser-address">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                <span>fritzo-website.vercel.app</span>
+              </div>
+              <div class="project-live-indicator ongoing">
+                <span class="pulse-indicator"></span>
+                <span>⚡ Ongoing Project</span>
+              </div>
+            </div>
+
+            <!-- Fallback Stage for Ongoing Build -->
+            <a href="https://fritzo-website.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-preview-stage" style="background: radial-gradient(circle at 50% 50%, #291a07 0%, #0d0802 100%);" aria-label="Preview ongoing Fritzo website build">
+              <div class="preview-grid-bg"></div>
+              <div class="mockup-visual-card">
+                <div class="mockup-top-meta">
+                  <span class="mockup-brand-title">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="m10 15 5-3-5-3v6z"></path></svg>
+                    Fritzo Studio
+                  </span>
+                  <span class="mockup-metric-badge amber">In Development</span>
+                </div>
+                <div class="mockup-center-graphic">
+                  <div style="font-size: 0.88rem; font-weight: 700; color: #ffffff; text-align: center;">
+                    ✨ A Lasting Impression — Brand Experience
+                  </div>
+                </div>
+                <div class="mockup-bottom-meta">
+                  <span style="color: #fbbf24;">⚡ Sprint 3 In Progress</span>
+                  <span>Interactive 3D UI</span>
+                </div>
+              </div>
+              <div class="preview-overlay-badge">
+                <span class="preview-pill-tag amber">Ongoing Build</span>
+                <span class="preview-zoom-icon" title="Preview ongoing build">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </span>
+              </div>
+            </a>
+
+            <!-- Card Content Details -->
+            <div class="project-content">
+              <div class="project-category-kicker" style="color: #fbbf24;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <span>Creative Studio &amp; Agency • In Progress</span>
+              </div>
+              <h3 class="project-title">Fritzo — A Lasting Impression</h3>
+              <p class="project-desc">
+                An ongoing bespoke creative presence engineered with fluid micro-interactions, avant-garde typography, and modern digital aesthetics designed to leave a lasting impact.
+              </p>
+              <div class="project-tech-tags">
+                <span class="tech-tag-pill" style="border-color: rgba(245, 158, 11, 0.3); color: #fbbf24;">⚡ Ongoing Build</span>
+                <span class="tech-tag-pill">Creative Direction</span>
+                <span class="tech-tag-pill">Fluid Motion</span>
+                <span class="tech-tag-pill">3D UI</span>
+              </div>
+            </div>
+
+            <!-- Footer Action Buttons -->
+            <div class="project-card-footer">
+              <a href="https://fritzo-website.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-project-visit" aria-label="Preview ongoing Fritzo website build">
+                <span>Preview Ongoing Build</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+              <button class="btn-project-copy" data-copy-val="https://fritzo-website.vercel.app/" title="Copy project URL">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
+
+          </article>
+        </div>
+
+      </div>
+
+    </section>
+
+  <!-- Floating Audio & Interactivity Controls -->
+  <aside class="floating-controls">
+    <button class="btn-control-pill active" id="audio-toggle-btn" aria-label="Toggle High-Tech Audio FX">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+        <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+      </svg>
+      <span>Sound FX: ON</span>
+    </button>
+  </aside>
+
+  <!-- Interactive Contact Modal Drawer -->
+  <div class="contact-modal-overlay" id="contact-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="contact-card-glass">
+      
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close Modal">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="modal-header">
+        <div class="hero-badge-pill" style="margin-bottom: 12px;">
+          <span class="sparkle">✦</span>
+          <span>DIRECT CONTACT CHANNELS</span>
+        </div>
+        <h2 class="modal-title" id="modal-title">Let's Build with Nevoxio</h2>
+        <p class="modal-subtitle">
+          Have an idea for a mobile app, web application, or custom IT infrastructure? Contact our engineering team directly:
+        </p>
+      </div>
+
+      <!-- Quick Contact Info Cards with One-Click Copy -->
+      <div class="contact-quick-list">
+        
+        <!-- Phone Item -->
+        <div class="contact-quick-item">
+          <div class="contact-item-info">
+            <div class="contact-item-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="contact-label">Direct Mobile / WhatsApp</div>
+              <div class="contact-value">0756180487</div>
+            </div>
+          </div>
+          <button class="btn-copy-action" data-copy-val="0756180487">Copy</button>
+        </div>
+
+        <!-- Email Item -->
+        <div class="contact-quick-item">
+          <div class="contact-item-info">
+            <div class="contact-item-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div>
+              <div class="contact-label">Official Email</div>
+              <div class="contact-value" style="font-size: 0.88rem;">nevoxioitsolitions@gmail.com</div>
+            </div>
+          </div>
+          <button class="btn-copy-action" data-copy-val="nevoxioitsolitions@gmail.com">Copy</button>
+        </div>
+
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="contact-actions-footer">
+        <a href="tel:0756180487" class="btn-modal-action btn-modal-call">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <span>Call Now</span>
+        </a>
+
+        <a href="mailto:nevoxioitsolitions@gmail.com" class="btn-modal-action btn-modal-email">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          <span>Send Email</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/three.min.js"></script>
+  <script src="assets/js/gsap.min.js"></script>
+  <script src="assets/js/background3d.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
